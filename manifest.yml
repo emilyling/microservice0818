@@ -1,0 +1,13 @@
+applications:
+- name: hello0818
+  timeout: 180
+  instances: 1
+  path: ./target/hello0818.zip
+  memory: 512M
+  buildpack: liberty-for-java
+  host: lexbz2246
+  domain: mybluemix.net
+  services:
+  - hello0818-cloudantNoSQLDB-fb6c
+env:
+  services_autoconfig_excludes: cloudantNoSQLDB=config
